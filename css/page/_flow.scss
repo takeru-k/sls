@@ -1,0 +1,33 @@
+.flow__items{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flow__figure{
+  margin-bottom: 16px;
+  text-align: center;
+
+  figcaption{
+    margin-top: 4px;
+  }
+
+  img{
+    margin: 0 auto;
+    width: 350px;
+
+    @include mq('md'){
+      width: 320px;
+    }
+
+    @include mq('lg'){
+      width: 280px;
+    }
+  }
+}
+
+@include mq('md'){
+  .flow__figure + .flow__figure{
+    padding-left: 16px;
+  }
+}

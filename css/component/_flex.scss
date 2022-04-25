@@ -1,0 +1,54 @@
+/*================================
+	横並びのスタイリング
+=================================*/
+@include mq('lg'){
+  .flex{
+    display: flex;
+    max-width: 1160px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .section{
+      padding-top: 0;
+    }
+  }
+
+  .flex__item{
+    width: 48%;
+  }
+
+}
+
+.flex__img{
+  height: 100%;
+  display: flex;
+
+  img{
+    object-fit: cover;
+    min-width: 350px;
+  }
+}
+
+.flex__item{
+  margin-bottom: 16px;
+}
+
+.flex__texts{
+  p{
+    margin-bottom: 16px;
+  }
+}
+
+/* メープルガーデンのご紹介の画像 */
+.float__img{
+  img{
+    margin: 0 auto;
+  }
+
+  /* 768px以上のスタイリング */
+  @include mq('md'){
+    float: right;
+    width: 20%;
+    padding-left: 24px;
+  }
+}

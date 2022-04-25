@@ -1,0 +1,48 @@
+/*================================
+	ごあいさつ
+=================================*/
+.message__contents{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.message__portrait{
+  margin-bottom: 12px;
+
+  img{
+    margin: 0 auto;
+  }
+
+  p{
+    text-align: center;
+  }
+}
+
+.message__area{
+  
+
+  h3{
+    font-size: 16px;
+
+    &:not(:first-child){
+      margin-top: 16px;
+    }
+  }
+}
+
+/* 1024px以上は横並び */
+@include mq('lg'){
+  .message__contents{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .message__area{
+    width: 70%;
+  }
+
+  .message__portrait{
+    width: 20%;
+  }
+}

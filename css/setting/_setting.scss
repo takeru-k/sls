@@ -1,0 +1,91 @@
+/*================================
+	ブレイクポイント
+=================================*/
+
+$breakpoints: (
+  'sm': (min-width: 640px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 1024px),
+  'xl': (min-width: 1280px)
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: xl) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*================================
+	色設定
+=================================*/
+$color-main: #0C3B82;
+$color-sub: #f0f9f7;
+$color-accent: #46c4db;
+$color-button: #337ab7;
+
+/*================================
+	全体共通
+=================================*/
+body{
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif; 
+  font-weight: 500;
+  color: #333;
+  line-height: 1.75;
+}
+
+main{
+  position: relative;
+}
+
+.inner{
+  max-width: 1200px;
+  padding-right: 6%;
+  padding-left: 6%;
+  margin: 0 auto;
+}
+
+a{
+  color: inherit;
+  cursor:pointer;
+  text-decoration: none;
+
+  &:hover{
+    opacity: .8;
+  }
+}
+
+li{
+  list-style: none;
+}
+
+.bg{
+  width: 55%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #eff3f9;
+  z-index: -1;
+}
+
+img + img{
+  margin-top: 24px;
+}

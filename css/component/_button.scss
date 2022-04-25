@@ -1,0 +1,53 @@
+.button__area{
+  margin-top: 24px;
+
+  @include mq('md'){
+    margin-top: 48px;
+  }
+}
+
+.button{
+  display: inline-block;
+  background: $color-button;
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem 3rem;
+  position: relative;
+  max-width: 250px;
+  font-weight: bold;
+  text-align: center;
+}
+
+  /* 医療安全ページで使用するボタン */
+.button-medical{
+  display: block;
+  border: 1px solid $color-button;
+  color: $color-button;
+  text-decoration: none;
+  padding: 8px 16px;
+  position: relative;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+
+  &:hover{
+    color: #fff;
+    background: $color-button;
+  }
+}
+
+
+/* 768px以上は横並び */
+@include mq('md'){
+  .button__group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-medical{
+    width: 32%;
+    margin: 4px;
+  }
+}
